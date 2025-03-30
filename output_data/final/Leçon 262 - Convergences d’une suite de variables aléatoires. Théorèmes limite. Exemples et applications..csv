@@ -1,0 +1,461 @@
+Leçon 262 - Convergences d’une suite de variables aléatoires. Théorèmes limite. Exemples et applications. M2 Préparation à l’agrégation
+Leçon 262 - Convergences d’une suite de Présentation de la leçon
+variables aléatoires. Théorèmes limite. Exemples
+"Je vais vous présenter la leçon 262 intitulée : ""Convergences d’une suite de variables"
+"et applications. aléatoires. Théorèmes limite. Exemples et applications."". Il existe différentes notions"
+de convergence en probabilité et qui ont un rôle central ainsi que divers implications.
+Lebutdecetteleçonestdevoirlesdifférentsliensentrecesmodesdeprobabilitéainsi
+que divers résultats qui en découlent.
+Oncommencedansunepremièrepartieparparlerdesdifférentsmodesdeconvergence
+Extrait du rapport de jury
+en allant de la convergence la plus forte à la plus faible (comme on le verra plus
+"tard). En ce qui concerne la convergence presque-sûre, on en donne la définition ainsi"
+que des conditions de convergence presque-sûre grâce au lemme de Borel-Cantelli et
+Lesliensentrelesdifférentsmodesdeconvergenced’unesuitedevariablesaléatoires
+on termine ce premier point par les propositions 5 et 6 ainsi qu’un exemple. Dans
+"doiventêtreillustréspardesexemplesetcontre-exemplesvariés.Ainsi,lesimplications"
+un deuxième point on parle de la convergence en moyenne d’ordre p en donnant la
+"entrelesdiversmodesdeconvergence,etlesréciproquespartiellesdoiventêtreconnues."
+définition ainsi que deux résultats. On continue ensuite avec le cas de la convergence
+"Lesthéorèmesdeconvergenceduprogramme(loisdesgrandsnombres,théorèmecentral"
+en probabilité : on donne la définition de la convergence en probabilité et on regarde
+"limite) sont bien sûr au coeur de cette leçon, et la preuve de la loi forte des grands"
+ce qui se passe au travers d’une fonctions avant de rappeler les inégalités de Markov
+"nombres, éventuellement sous des hypothèses de confort, peut être présentée. Les liens"
+et de Bienaymé-Tchebychev qui sont souvent utiles pour montrer une convergence en
+"de ces théorèmes limite avec les questions d’estimation ponctuelle, d’estimation par"
+probabilité. On termine cette partie par la convergence en loi en donnant uniquement
+"intervalle de confiance en statistique, ont leur place dans cette leçon."
+quelques points puisque nous en reparlerons dans la prochaine partie de manière plus
+Lescandidatesetcandidatssolidespeuventaborderlaconvergencedessériesdevariables
+détaillée.
+"aléatoiresindépendantes,lesmarchesaléatoires,laloidulogarithmeitéré,laméthodede"
+Dans une deuxième partie on s’intéresse aux liens entre les différents modes de
+"Monte Carlo, le théorème central limite dans Rd, les chaînes de Markov, les lois stables"
+convergence et l’on commence par étudier des caractérisations de la convergence en loi
+ou infiniment divisibles.
+quiestl’unedesplusutiliséevialeTCL(cf.III.2).OnénoncelelemmedeSlutskyainsi
+que le théorème de Lévy qui ramène un problème de convergence en loi à un problème
+de convergence simple de fonctions caractéristiques. On donne ensuite le théorème 29
+etonpassedanslecasdevariablesaléatoiresréellesportéesparNvialaproposition31
+ainsi que deux applications avec le théorème 32 et la proposition 34. On parle ensuite
+des liens entre les différents modes de convergence dans un deuxième point. On donne
+alors des implications ainsi que des contre-exemples aux réciproques (on trouvera en
+annexe un schéma détaillé reprenant ces implications).
+Enfin dans une dernière partie on s’intéresse aux théorèmes limites avec en premier
+lieu la loi forte des grands nombres. On introduit tout d’abord la loi faible des grands
+nombres avant de passer au cas de la loi forte des grands nombres ainsi qu’un exemple
+d’application. Ces lois des grands nombres ont une grande importance en statistique
+aveclephénomènedestabilisationdesfréquencesquiestsouventutilisépourintroduire
+le concept de probabilité. On conclut finalement cette leçon avec le théorème central
+limitequipossèdeencoredesapplicationsenstatistiquecommelacréationd’intervalles
+de confiance et la proposition 58 ainsi que deux corollaires.
+"Finalement, on trouvera également en annexe un schéma des différents lien entre les"
+modes de convergence en probabilité.
+1/7
+Leçon 262 - Convergences d’une suite de variables aléatoires. Théorèmes limite. Exemples et applications. M2 Préparation à l’agrégation
+Plan général Cours détaillé
+"I - Modes de convergence Dans toute cette leçon, on considère (Ω,F,P) un espace probabilisé, (X ) une"
+n n∈N
+1 - Convergence presque-sûre suitedevariablesaléatoiresàvaleursdansRd (avecd∈N∗)etX unevariablealéatoire
+2 - Convergence en moyenne d’ordre p à valeurs dans Rd également.
+3 - Convergence en probabilité
+4 - Convergence en loi
+I Modes de convergence
+II - Théorèmes et propriétés de convergence
+1 - Caractérisation de la convergence en loi
+I.1 Convergence presque-sûre
+2 - Lien entre les différents modes de convergence
+"Définition 1 : Convergence presque-sûre [Chabanol, p.49]"
+III - Théorèmes limites On dit que (X ) converge presque-sûrement vers X lorsqu’il existe un
+n n∈N
+1 - Loi forte des grands nombres ensembleC ∈F deprobabilité1surlequellasuiteconvergeponctuellementeton
+2 - Théorème central limite P−p.s.
+note X −→ X.
+n
+n→+∞
+IV - Annexe
+"1 - Lien entre les différents modes de convergence Remarque 2 : [Chabanol, p.49]"
+"∗Si(X ) convergepresque-sûrementversX,alorslalimiteestP−p.s.unique."
+n n∈N
+∗ On remarque que l’on a :
+(cid:26) (cid:27)
+(cid:92) (cid:91) (cid:92) 1
+{ω∈Ω tq X(ω)= lim X (ω)}= ω∈Ω tq |X (ω)−X(ω)|≤
+n→+∞ n n p
+p≥1m∈Nn≥m
+Cette écriture ne faisant apparaître que des intersections et des unions dénom-
+"brables, elle peut s’avérer utile pour démontrer une convergence presque-sûre."
+"Proposition 3 : [Chabanol, p.51]"
+"Si X est une variable aléatoire telle que, pour tout réel ε > 0 on ait"
+(cid:80)+∞P(|X
+"−X|>ε)<+∞, alors (X ) converge presque-sûrement vers X."
+n=0 n n n∈N
+"Proposition 4 : [Chabanol, p.51]"
+"Si les X sont indépendants, alors (X ) converge presque-sûrement vers 0 si,"
+n n n∈N
+"et seulement si, pour tout ε>0,"
+(cid:80)+∞P(|X
+|>ε)<+∞.
+n=0 n
+"Proposition 5 : [Chabanol, p.52]"
+Soit f une fonction continue de Rd sur Rk.
+"Si(X ) convergepresque-sûrementversX,alors(f(X )) convergepresque-"
+n n∈N n n∈N
+sûrement vers f(X).
+"Proposition 6 : [Chabanol, p.52]"
+Soient (Y ) et (Z ) deux suites convergeant presque-sûrement repsective-
+n n∈N n n∈N
+ment vers Y et Z.
+La suite (Y +Z ) converge presque-sûrement vers Y +Z.
+n n n∈N
+2/7
+Leçon 262 - Convergences d’une suite de variables aléatoires. Théorèmes limite. Exemples et applications. M2 Préparation à l’agrégation
+"I.2 Convergence en moyenne d’ordre p Exemple 15 : [Ouvrard, p.95]"
+Onconsidère(Y ) et(Z ) deuxsuitesconvergeantenprobabilitérepsecti-
+n n∈N n n∈N
+"Dans toute cette sous-partie, on considère p≥1. vement vers Y et Z."
+"La suite (< Y ;Z >) converge en probabilité vers < Y,Z > et la suite"
+n n n∈N
+"Définition 7 : Convergence en moyenne d’ordre p [Chabanol, p.49] : (max(Y ,Z )) converge en probabilité vers max(Y,Z)."
+n n n∈N
+On suppose que les X et X admettent un moment d’ordre p.
+n
+On dit que (X ) converge en moyenne d’ordre p vers X lorsque On rappelle également les inégalités de Markov et de Bienaymé-Tchebychev :
+n n∈N
+lim E(|X −X|p)=0.
+n→+∞ n
+"Proposition 16 : Inégalité de Markov [Chabanol, p.38] :"
+"Remarque 8 : [Ouvrard, p.98] Soit a>0."
+"∗ Si p = 1 (resp. p = 2), on dit que la suite converge en moyenne (resp. Si X admet un moment d’ordre 1, alors P(|X|>a)≤ E(|X|)."
+a
+converge en moyenne quadratique).
+"∗ Si (X ) converge en moyenne d’ordre p, alors sa limite est P−p.s. unique. Proposition 17 : Inégalité de Bienaymé-Tchebychev [Chabanol, p.38] :"
+n n∈N
+Soit ε>0.
+"Proposition 9 : [Chabanol, p.52] Si X admet un moment d’ordre 2, alors P(|X−E(X)|>ε)≤ Var(X)."
+ε2
+"Si les X sont des variables aléatoires réelles de carré intégrable, qu’il existe une"
+n
+"constante a telle que lim E(X ) = a et que lim Var(X ) = 0, alors Remarque 18 :"
+n→+∞ n n→+∞ n
+(X ) converge en moyenne quadratique vers a. Ilestsouventjudicieuxd’utiliserlesinégalitésdeMarkovetBienaymé-Tchebychev
+n n∈N
+pour montrer une convergence en probabilité.
+"Proposition 10 : [Chabanol, p.52]"
+Soient (Y ) et (Z ) deux suites convergeant en moyenne d’ordre p repsec- I.4 Convergence en loi
+n n∈N n n∈N
+tivement vers Y et Z.
+"Définition 19 : Convergence en loi [Chabanol, p.57] :"
+La suite (Y +Z ) converge en moyenne d’ordre p vers Y +Z.
+n n n∈N
+Onditquelasuitedevariablesaléatoires(X ) convergeenloiversXlorsque
+n n∈N
+"pour toute fonction f ∈C0(R), on a lim E(f(X ))=E(f(X))."
+b n
+I.3 Convergence en probabilité n→+∞
+"Définition 11 : Convergence en probabilité [Chabanol, p.49] : Développement 1: [A] [cf. QUEFFELEC]"
+"On dit que (X ) converge en probabilité vers X lorsque pour tout ε>0,"
+"n n∈N Lemme 20 : [Queffélec, p.542]"
+"lim n→+∞ P(|X n −X|≥ε)=0 et on note X n N − → P→ +∞ X. (X n ) n∈N converge en loi vers X si, et seulement si, pour toute fonction"
+"f ∈C0(R), lim E(f(X ))=E(f(X))."
+0 n
+n→+∞
+"Proposition 12 : [Chabanol, p.52]"
+"Si les X sont des variables aléatoires réelles de carré intégrable, qu’il existe une"
+n
+"constante a quelle que lim n→+∞ E(X n ) = a et que lim n→+∞ Var(X n ) = 0, alors Remarque 21 : [Chabanol, p.60]"
+(X n ) n∈N converge en probabilité vers a. La convergence en loi n’est pas compatible avec l’addition en général.
+"En effet, on peut prendre X ⇝R (cid:0)1(cid:1) et pour tout n∈N, X =Y =−X."
+"Proposition 13 : [Chabanol, p.52] 2 n n"
+"Soit f une fonction continue de Rd sur Rk. Cependant, on a tout de même résultat suivant :"
+"Si (X ) converge en probabilité vers X, alors (f(X )) converge en proba-"
+n n∈N n n∈N
+"bilité vers f(X). Proposition 22 : [Chabanol, p.60]"
+Soit f une fonction continue de Rd sur Rk.
+"Proposition 14 : [Chabanol, p.52] Si (X ) converge en loi vers X, alors (f(X )) converge en loi vers f(X)."
+n n∈N n n∈N
+Soient (Y ) et (Z ) deux suites convergeant en probabilité repsectivement
+n n∈N n n∈N
+vers Y et Z.
+La suite (Y +Z ) en probabilité vers Y +Z.
+n n n∈N
+3/7
+Leçon 262 - Convergences d’une suite de variables aléatoires. Théorèmes limite. Exemples et applications. M2 Préparation à l’agrégation
+"II Théorèmes et propriétés de convergence Proposition 30 : [Chabanol, p.59]"
+"Si les X et X sont à valeurs dans N, alors (X ) converge en loi vers X si, et"
+n n n∈N
+"seulement si, pour tout k∈N, lim P(X =k)=P(X =k)."
+II.1 Caractérisation de la convergence en loi n→+∞ n
+"Théorème 31 : [Chabanol, p.64]"
+"Définition 23 : Fonction caractéristique [Chabanol, p.43] : Si, pour tout n∈N∗, X ⇝B (cid:0) n,λ(cid:1) (λ>0), alors (X ) converge en loi vers"
+"On appelle fonction caractéristique de X, la fonction : n n n n∈N"
+X ⇝P(λ).
+Φ : R −→ C
+X
+"t (cid:55)−→ E (cid:0) eitX(cid:1) = (cid:82) eitxdP (x) Théorème 32 : [Berhuy, p.714]"
+R X Soientn∈NetD lenombrededérangementsdeS (c’est-à-diredepermutations
+n n
+sans points fixes).
+Exemple 24 :
+"∗ Si X suit une loi de Bernoulli de paramètre p, alors Φ :t(cid:55)−→1−p+peit. (cid:88) n (cid:32) n (cid:33) (cid:88) n (−1)k"
+"X Pour tout entier naturel n, on a n!= D et D =n!"
+"∗ Si X suit une loi exponentielle de paramètre λ, alors Φ :t(cid:55)−→ λ . k n−k n k!"
+X λ−it k=0 k=0
+"∗ Si X suit une loi de Poisson de paramètre µ, alors Φ"
+:t(cid:55)−→eµ(eit−1)
+.
+X
+"Proposition 33 : [Caldero, p.303]"
+"Lemme 25 : Lemme de Slutsky [Chabanol, p.61] : Soit P la probabilité uniforme sur (S n ,P(S n ))."
+Soient (Y n ) n∈N et (Z n ) n∈N deux suites de variables aléatoires réelles. Si F n est la variable aléatoire réelle qui compte le nombre de points fixe de
+"Si (Y n ) n∈N converge en loi vers Y et (Z n ) n∈N converge en loi vers une variable σ∈S , alors pour tout r∈ 0;n on a P(F =r)= (cid:0)n r (cid:1) D n−r = 1 n (cid:88) −r (−1)k ."
+"aléatoire constante a, alors la suite ((X n ,Y n )) n∈N converge en loi vers (X,a). n (cid:74) (cid:75) n Card(S n ) r! k!"
+"Enparticulier,(Y +Z ) convergeenloiversY +aet(Y Z ) convergeen k=0"
+n n n∈N n n n∈N
+"loi vers aY. De plus, (F n ) n∈N∗ converge en loi vers la variable aléatoire Z qui suit une loi de"
+Poisson de paramètre 1 et on a E(F )=Var(F )=1.
+n n
+Développement 2: [B] [cf. QUEFFELEC]
+"Lemme 34 : Lemme de Scheffé [Chabanol, p.59] :"
+"Théorème 26 : Théorème de Lévy [Queffélec, p.544] : Soient(Y ) unesuitedevariablesaléatoiresayantpourdensitésrespectivesf"
+n n∈N n
+On a équivalence entre : et Y une variable aléatoire ayant pour densité f.
+"∗ (X n ) n∈N converge en loi vers X. Si pour tout x ∈ R, f n (x) tend vers f(x), alors (f n ) n∈N converge vers f dans L1"
+∗ La suite (Φ Xn ) n∈N converge simplement vers Φ X . et (Y n ) n∈N converge en loi vers Y.
+"Remarque 35 : [Chabanol, p.60]"
+Le théorème ci-dessous apporte quelques précisions : Une suite de variables aléatoires à densité peut converger en loi vers une variable
+aléatoire à densité sans que les densités ne convergent.
+"Théorème 27 : [Chabanol, p.58]"
+"Si (Φ Xn ) n∈N converge simplement vers Ψ continue en 0, alors Ψ est la fonction Exemple 36 : [Hauchecorne, p.361]"
+caractéristique d’une variable aléatoire X. On considère la suite de fonctions (F n ) n∈N∗ définies sur R et de terme général
+"De plus, la suite (X ) converge en loi vers X. (cid:16) (cid:17)"
+n n∈N F :x(cid:55)−→ x− sin(2nπx) 1 (x)+1 (x).
+n 2nπ [0;1] [1;+∞[
+"Théorème 28 : [Chabanol, p.58] La suite (F n ) n∈N∗ converge simplement vers la fonction de répartition de la loi"
+"On suppose que les X n et X sont des variables aléatoires réelles. uniforme,cependantlasuite(f n (x)) n∈N n’admetpasdelimitepourtoutx∈[0;1]."
+"La suite (X ) converge en loi vers X si, et seulement si, pour tout point t de"
+n n∈N
+"Remarque 37 : [Chabanol, p.60]"
+"continuité de F , on a lim F (t)=F (t)."
+X n→+∞ Xn X
+Une suite de variables aléatoires à densité peut converger en loi vers une variable
+"Exemple 29 : [Chabanol, p.59] discrète (et une suite de variables aléatoires discrètes peut converger en loi vers"
+"Si pour tout n ∈ N∗, X ⇝ δ , alors on a (X ) qui converge en loi vers une variable aléatoire à densité)."
+n 1 n n∈N
+X ⇝δ . n
+0
+4/7
+Leçon 262 - Convergences d’une suite de variables aléatoires. Théorèmes limite. Exemples et applications. M2 Préparation à l’agrégation
+II.2 Lien entre les différents modes de convergence III Théorèmes limites
+"Théorème 38 : [Chabanol, p.50]"
+III.1 Loi forte des grands nombres
+"Si (X ) converge presque-sûrement, alors elle converge en probabilité et les"
+n n∈N
+"limites sont P−p.s. égales. Théorème 47 : Loi faible des grands nombres [Chabanol, p.55] :"
+Soit (Y n ) n∈N∗ une suite de variables aléatoires réelles indépendantes et identique-
+"Théorème 39 : [Chabanol, p.50]"
+ment distribuées.
+S
+qu
+i(
+i
+X
+co n n
+)
+v n e ∈ r N ge
+co
+p
+n
+r
+v
+e
+e
+s
+r
+q
+g
+u
+e
+e
+e
+-s
+n
+û
+p
+re
+r
+m
+ob
+e
+a
+n
+b
+t
+il
+v
+it
+e
+é
+rs
+ve
+X
+rs
+.
+"X,alorsilexisteunesous-suite(X"
+φ(n)
+)
+n∈N Si E
+(cid:0)
+Y 1
+2(cid:1)
+"<+∞, alors"
+(cid:0)
+Y n
+(cid:1)
+n∈N converge en moyenne quadratique vers E(Y 1 ).
+"Remarque 48 : [Chabanol, p.56]"
+"Remarque 40 : [Ouvrard, p.93]"
+"Le résultat reste vrai sous des hypothèses moins fortes. En effet, on peut deman-"
+La convergence en probabilité n’implique pas la convergence presque-sûrement en der que la suite (cid:0) E(Y2) (cid:1) soit bornée et que les espérances de chaque Y sont
+"général. En effet, la suite (X n ) n∈N de variables aléatoires indépendantes à valeurs identiques ou bien enc n ore n∈ q N ue les Y soient juste deux à deux indépendantes i ."
+"dans 0 et 1 telle que pour tout n ∈ N, P(X = 1) = 1 et P(X = 0) = 1− 1 i"
+n n n n
+converge en probabilité vers 0 mais pas presque-sûrement.
+"Proposition 49 : [Chabanol, p.56]"
+"Théorème 41 : [Chabanol, p.50] Soit (Y n ) n∈N∗ une suite de variables aléatoires réelles indépendantes et identique-"
+ment distribuées.
+Soit p≥1.
+Si E
+(cid:0) Y4(cid:1)
+"<+∞, alors"
+(cid:0)
+Y
+(cid:1)
+converge presque-sûrement vers E(Y ).
+"Si (X n ) n∈N converge en moyenne d’ordre p, alors elle converge en probabilité. 1 n n∈N 1"
+"Théorème 50 : Loi forte des grands nombres [Chabanol, p.53] [ADMIS] :"
+"Remarque 42 : [Ouvrard, p.101]"
+"La réciproque est fausse en général. En effet, si pour tout n ∈ N∗, X est de loi Soit (Y n ) n∈N∗ une suite de variables aléatoires réelles indépendantes et identique-"
+n
+"1δ + (cid:0) 1− 1(cid:1) δ , alors la suite (X ) converge en probabilité vers 0 mais pas ment distribuées."
+"d n an n s 2 L1(Ω,F n ,P). 0 n n∈N Si les Y i sont intégrables, alors (cid:0) Y n (cid:1) n∈N converge presque-sûrement vers E(Y 1 )."
+"Proposition 43 : [Chabanol, p.60] Corollaire 51 : [Chabanol, p.53]"
+"Si (X n ) n∈N converge en probabilité vers X, alors elle converge en loi vers X. Si (A n ) n∈N∗ est une suite d’événements indépendants de même probabilité, alors"
+on a : 1 (cid:80)n 1 − p. → s. P(A ).
+"Corollaire 44 : [Chabanol, p.61] n k=1 Ak n→+∞ 1"
+Soit p≥1.
+"Exemple 52 : [Chabanol, p.53]"
+Laconvergencepresque-sûreetlaconvergenceenmoyenned’ordrepimpliquentla
+"Si on lance une infinité de fois un dé et que l’on note A l’événement ""Avoir un"
+convergence en loi. n
+"6 au n-ième lancer"", alors la proposition de 6 obtenus au cours des n premiers"
+lancers tend vers P(A )= 1.
+"Remarque 45 : [Hauchecorne, p.362] 1 6"
+La réciproque de la proposition précédente est fausse en général.
+"Remarque 53 : [Chabanol, p.173]"
+"En effet, si X ⇝B(p), alors on a la convergence en loi mais pas en probabilité."
+n
+La moyenne empirique Y est un estimateur sans biais et (fortement) convergent
+n
+"Bien que la réciproque de la proposition précédente est fausse en général, mais elle de E(Y 1 ) par la loi forte des grands nombres."
+est vraie lorsque la limite est constante :
+"Proposition 46 : [Chabanol, p.61]"
+"Si (X ) converge en loi vers une variable aléatoire a constante, alors (X )"
+n n∈N n n∈N
+converge en probabilités vers a.
+5/7
+Leçon 262 - Convergences d’une suite de variables aléatoires. Théorèmes limite. Exemples et applications. M2 Préparation à l’agrégation
+III.2 Théorème central limite
+Développement 4: [cf. FRANCINOU]
+"Développement 3: [C] [cf. QUEFFELEC] Lemme 58 : [Francinou, p.165]"
+Soit n∈N∗.
+"Théorème 54 : Théorème central limite [Queffélec, p.549] : La série (cid:80)knk−1 converge et (cid:80)+∞ knk−1 = 1."
+Si(X ) estunesuitedevariablesaléatoiresréellesdansL2(R)indépen- (n+k)! k=1 (n+k)! n!
+n n∈N
+dantesetidentiquementdistribuéesdemoyenneµetdevariancecommune
+"Proposition 59 : [Francinou, p.165]"
+"σ2, en notant S = (cid:80)n X , alors on a :"
+"n k=1 k Soientn∈NetX 1 ,...,X n desvariablesaléatoiresréellesindépendanteset"
+identiquement distribuées de loi de Poisson de paramètre 1.
+"S n σ √ − n nµ n→ −L→ +∞ Z où Z ∼N 1 (0,1) Sil’onaS n = (cid:80)n k=1 X k etT n = Sn√− n n alors (cid:82) 0 +∞P(T n ≥x)dx= √ n n ! (cid:0)n e (cid:1)n."
+"Théorème 60 : Formule de Stirling [Francinou, p.165] :"
+√
+"Corollaire 55 : [Chabanol, p.62] On a l’équivalent : n! ∼ 2πn"
+(cid:0)n(cid:1)n.
+Soit a>0. n→+∞ e
+"Avec les mêmes hypothèses que le théorème central limite, on a :"
+P
+(cid:18)
+µ∈
+(cid:20)
+X n − √
+aσ
+n ;X n + √
+aσ
+n
+(cid:21)(cid:19)
+n→ −→ +∞ 2
+1
+π
+(cid:90)
+−
+a
+a
+e−x
+2
+2
+dx
+"Dans le cas de lois de Bernoulli, on obtient alors :"
+"Corollaire 56 : [Chabanol, p.63]"
+"Si (S n ) n∈N∗ est une suite de variables aléatoires de loi binomiale B(n,p), alors la"
+(cid:18) (cid:19)
+suite √Sn−np converge en loi vers une loi normale centrée réduite.
+np(1−p)
+n∈N∗
+On a également la généralisation suivante :
+"Proposition 57 : Delta-méthode [Chabanol, p.63] :"
+Soient (Y ) une suite de variables aléatoires réelles et g une fonction définie
+n n∈N
+sur R dérivable en θ telle que g′(θ)̸=0.
+√
+S’ilexistedeuxréelsθ etσ telsquelasuite( n(X −θ)) convergeenloivers
+la loi N
+"(cid:0) 0,σ2(cid:1)"
+", alors la suite ("
+√
+n(g(X )−g(θ)))
+n
+co
+n
+n
+∈
+v
+N
+erge en loi vers la loi
+N
+(cid:0)
+"0,σ"
+1 2(g′(θ))2(cid:1)
+.
+n n∈N
+1
+6/7
+Leçon 262 - Convergences d’une suite de variables aléatoires. Théorèmes limite. Exemples et applications. M2 Préparation à l’agrégation
+IV Annexe Remarques sur le plan
+IV.1 Lien entre les différents modes de convergence
+— Faire le lien entre le théorème central limite et les résultats de statistique.
+"— Il faut bien insister sur la convergence en loi qui est ""spéciale"" comparée aux"
+autres modes de convergence.
+Liste des développements possibles
+— Théorème de Lévy + TCL.
+— Formule de Stirling par le TCL.
+Bibliographie
+"— Marie Line Chabanol, Probabilités et Statistiques pour l’épreuve de Modélisation."
+"— Jean-Yves Ouvrard, Probabilité 2 - Master/Agrégation."
+"— Hervé Queffélec, Analyse pour l’agrégation."
+"— Grégory Berhuy, Algèbre : le grand combat."
+"— Philippe Caldero, Carnet de voyage en Analystan."
+"— Bertrand Hauchecorne, Les contre exemples en mathématiques."
+"— Serge Francinou, Oraux X-ENS, Mathématiques, Tome 6."
+7/7
